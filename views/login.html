@@ -1,0 +1,34 @@
+<div class='container'>
+    <div class='jumbotron'>
+        <div id="textintro">
+<section ng-cloak>
+  <form class="form-signin" name="myform" 
+    ng-submit="login()"
+    novalidate>
+
+    <div>
+      <h1>Пожалуйста, авторизируйтесь</h1>
+      <p ng-show="message" id='message'> {{ message }}</p>
+    </div>
+
+    <fieldset>
+        <div class="inputwrapper">
+      <input type="email" name="email" placeholder="Email" class="form-control"
+       ng-model="user.email" ng-required="true">
+        </div>
+
+
+ <div class="inputwrapper">
+      <input type="password" name="password" placeholder="Пароль" class="form-control"
+      ng-model="user.password" ng-required="true">
+        </div>
+
+    </fieldset>
+
+      <p><button type="submit" class='btn btn-lg btn-success' role="button" ng-disabled="myform.$invalid">ВОЙТИ</button></p>
+      <h4>или <a ng-href="#/register">зарегистрируйтесь</a></h4>
+  </form>
+</section>
+</div>
+</div>
+</div>

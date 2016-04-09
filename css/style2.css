@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    
+    padding: 20px 0 0 0;
+    font-size: 20px;
+}
+
+a {
+    
+  text-decoration: none;
+    
+}
+
+ul {
+    
+    padding: 0px;
+}
+
+li {
+    
+    display: inline;
+}
+#menu {
+    
+     font-size: 14px;
+}
+
+.navbar-brand {
+    
+    float: left;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+    
+    text-decoration: none;
+}
+
+.container {
+    
+    max-width: 1000px;
+}
+
+.hellouser {
+    
+    color: dimgrey;
+    padding: 0 10px 0 10px;
+    font-size: 16px;
+}
+
+.lists {
+
+list-style: none;
+
+
+}
+
+#menu {
+    
+font-size: 18px;
+color: black;
+    
+}
+
+.navbar-link {
+    
+    font-size: 28px;
+    color: black;
+}
+
+#textintro h1 {
+    
+    font-size: 28px;
+    color: dimgrey;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+h4 {
+  text-align: center;  
+    
+}
+
+.container .jumbotron {
+    
+    padding: 30px;
+}
+
+.inputwrapper {
+    
+    margin: 20px 0 20px 0;
+}
+
+p {
+    text-align: center;
+}
+
+#link {
+    border: solid 1px #c2c2c2;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    font-size: 18px;
+        
+}
+
+.text {
+margin: 50px 0 50px 0;
+
+    
+}
+
+.comment {
+    
+    font-size: 16px;
+    color: #8c8c8c;
+}
+
+h3 #your-link {
+    color: #8c8c8c;
+    
+}
+
+#link-generated {
+    
+    text-align: left;
+    
+}
+
+.link-block {
+    
+    background-color: #f7f5f6;
+    overflow: hidden;
+    
+}
+
+.link-block2 {
+    
+    overflow: hidden;
+    
+}
+
+nav .navbar-brand {
+    
+    line-height: 12px;
+}
+
+#message {
+    
+    margin-top: 15px;
+    color: brown;
+}
+@media (max-width: 480px) {
+    div  nav .navbar-brand {
+        float: none;
+        text-align: center;
+        margin: 40px 0 -10px 0;
+        
+    }
+    
+    #textintro h1 {
+        
+       font-size: 20px; 
+    }
+    
+    #your-links {
+        
+       font-size: 20px;  
+    }
+    
+    #link-generated {
+        
+        font-size: 18px;  
+    }
+}
+
+.inputwrapper .form-control {
+    
+    font-size: 20px;
+    padding: 20px;
+    height: 50px;
+}

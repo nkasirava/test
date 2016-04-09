@@ -1,0 +1,31 @@
+<div class='container' ng-controller="RegistrationController">
+    <div class="header clearfix">
+        
+          
+        
+<nav id='header-nav' class='navbar'>
+               <ul class="nav nav-pills pull-right" id='menu'>
+    
+    <li><a ng-show="currentUser" ng-href="#/links">Мои ссылки</a></li>
+    <li><a ng-hide="currentUser" ng-href="#/login">Войти</a></li>
+    <li><a ng-hide="currentUser" ng-href="#/register">Регистрация</a></li>
+  </ul>
+            
+       
+<div class='navbar-brand'>
+                <a class="navbar-link" ng-href="#/" id='logo'>ElegantShorts</a>
+            </div>    
+    
+</nav>
+
+
+    </div>
+    
+    <div style='text-align: center;'>
+ <ul ng-show="currentUser" class="lists">
+     <span class='glyphicon glyphicon-user'></span><li ng-show="currentUser"><span class='hellouser'>Привет, {{currentUser.name}}!</span></li>
+     <li ng-show="currentUser"><a class='hellouser' ng-href="#/login" ng-click="logout()"><span>Выход</span></a></li>  
+        </ul>
+    </div>
+    
+</div>

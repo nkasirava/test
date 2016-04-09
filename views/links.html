@@ -1,0 +1,52 @@
+<div class='container'>
+    <div class='jumbotron'>
+
+  <div id="textintro">
+    <h1>Сгенерировать новую ссылку</h1>
+  </div><!-- textintro -->
+
+  <form name="myform" ng-submit="addLink()" novalidate>
+
+    <div class="inputwrapper">
+      <input type="text" name="linkname" class="form-control"
+      placeholder="URL"
+      ng-model="linkname" ng-required="true">
+    </div>
+      
+      <div class="inputwrapper">
+      <input type="text" name="linkcomment" class="form-control"
+      placeholder="Введите описание"
+      ng-model="linkcomment">
+    </div>
+      <p>
+    <button type="submit" class='btn btn-lg btn-success' role="button"
+      ng-disabled="myform.$invalid">ДОБАВИТЬ</button>
+      </p>
+    
+  </form><hr>
+
+ 
+        <h3><span id='your-links'>Ваши ссылки:</span></h3>
+  <div id="link" ng-repeat="link in links | orderBy:date:true" ng-if="currentUser.$id==link.user">
+      
+    <div class='link-block' ><nobr>
+        <button type="button" class="btn btn-default btn-lg" id='mybtn' ng-click="deleteLink(link)">
+  <span class='glyphicon glyphicon-trash' aria-hidden="true"></span>
+</button>
+
+    <span class="comment">{{link.name}}</span>
+        </nobr>
+        </div>
+      
+      
+      <nobr><div style='margin-top: 10px;' class='link-block2'><p id="link-generated"> <span class="label label-info">{{link.clicks}}</span>   <a id='link-generated' ng-href='#{{link.generated}}' class="text" target="_blank">{{getActualLink() + link.generated}}</a></p></div></nobr>
+    <span class="comment" ng-show="link.comments" style='font-style: italic'>{{link.comments}}</span>
+  </div>
+    
+    
+      </div>
+
+    </div>
+</div>
+
+

@@ -26,8 +26,9 @@
   </form><hr>
 
  
-        <h3><span id='your-links'>Ваши ссылки:</span></h3>
-  <div id="link" ng-repeat="link in links | orderBy:date:true" ng-if="currentUser.$id==link.user">
+        <h3><span id='your-links'>Ваши ссылки <span class="label label-primary">{{ getLinkQuantity() }}</span></span></h3>
+  <div id='links'>
+        <div id="link" ng-repeat="link in links | orderBy:date:true" ng-if="currentUser.$id==link.user">
       
     <div class='link-block' ><nobr>
         <button type="button" class="btn btn-default btn-lg" id='mybtn' ng-click="deleteLink(link)">
@@ -42,6 +43,7 @@
       <nobr><div style='margin-top: 10px;' class='link-block2'><p id="link-generated"> <span class="label label-info">{{link.clicks}}</span>   <a id='link-generated' ng-href='#{{link.generated}}' class="text" target="_blank">{{getActualLink() + link.generated}}</a></p></div></nobr>
     <span class="comment" ng-show="link.comments" style='font-style: italic'>{{link.comments}}</span>
   </div>
+      </div>
     
     
       </div>

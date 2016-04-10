@@ -16,10 +16,8 @@ myApp.controller('LinksController',
           
         $scope.whichuser = $routeParams.uId;
           
-
         $scope.addLink = function() {
             
-
           linksInfo.$add({
             date: Firebase.ServerValue.TIMESTAMP,
             generated: generateLink(),
@@ -37,7 +35,7 @@ myApp.controller('LinksController',
           var checkComment = function () {
               
               if ($scope.linkcomment==undefined) {
-                  
+             
                   return null;
               }
               
@@ -52,8 +50,7 @@ myApp.controller('LinksController',
             }
              
              else return $scope.linkname;
-             
-             
+    
          } 
           
          var generateLink = function() {
@@ -77,7 +74,7 @@ myApp.controller('LinksController',
 
         $scope.deleteLink = function(key) {
           linksInfo.$remove(key);
-        }; // deleteMeeting
+        };
           
         $scope.getActualLink = function () {
             
@@ -89,10 +86,8 @@ myApp.controller('LinksController',
         
          $scope.getLinkQuantity = function() {
             return document.getElementById('links').childElementCount;
-        }; // deleteMeeting
+        };
 
-
-
-      } // User Authenticated
-    }); // on Auth
-}]); //Controller
+      }
+    });
+}]);

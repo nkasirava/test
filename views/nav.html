@@ -4,9 +4,9 @@
           
         
 <nav id='header-nav' class='navbar'>
-               <ul class="nav nav-pills pull-right" id='menu'>
+               <ul class="nav nav-pills pull-right" id='menu' ng-hide="currentUser">
     
-    <li><a ng-show="currentUser" ng-href="#/links">Мои ссылки</a></li>
+    
     <li><a ng-hide="currentUser" ng-href="#/login">Войти</a></li>
     <li><a ng-hide="currentUser" ng-href="#/register">Регистрация</a></li>
   </ul>

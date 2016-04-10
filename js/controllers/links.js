@@ -73,7 +73,6 @@ myApp.controller('LinksController',
             
              return '/!' + newLink;
              
-             
         }; // generateLink
 
         $scope.deleteLink = function(key) {
@@ -88,9 +87,11 @@ myApp.controller('LinksController',
             return fullPath.substring(0, fullPath.length - cuttedLinkPart.length + 1);
         }
         
+         $scope.getLinkQuantity = function() {
+            return document.getElementById('links').childElementCount;
+        }; // deleteMeeting
 
-        
-        
+
 
       } // User Authenticated
     }); // on Auth
